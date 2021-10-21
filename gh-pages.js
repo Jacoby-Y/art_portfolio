@@ -1,6 +1,6 @@
-import { publish } from 'gh-pages';
+var ghpages = require('gh-pages');
 
-publish(
+ghpages.publish(
     'public', // path to public directory
     {
         branch: 'gh-pages',
