@@ -6,12 +6,14 @@
     $: {
         if (wrapper != null) {
             if (shown) {
-                wrapper.style.transform = "translate(0, 0)";
+                setTimeout(() => { wrapper.style.transform = "translate(0, 0)"; }, 10);
             } else {
                 wrapper.style.transform = "translate(100%, 0)";
             }
         }
     }
+
+    $: { if (wrapper != undefined) { if (shown) wrapper.style.opacity = "1"; else wrapper.style.opacity = "0"; } }
 
 </script>
 
